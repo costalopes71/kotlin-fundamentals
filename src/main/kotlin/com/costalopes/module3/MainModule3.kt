@@ -8,20 +8,33 @@ fun main(args: Array<String>) {
     val immutableQuestion = Question()
     // immutableQuestion = Question() cannot compile because its immutable
 
-    immutableQuestion.Answer = "mutable answers"
+    immutableQuestion.answer = "mutable answers"
     // immutableQuestion.Question = "" cannot compile because its immutable
 
-    println("The answer to the question ${immutableQuestion.Question} is ${immutableQuestion.Answer}")
+    println("The answer to the question ${immutableQuestion.question} is ${immutableQuestion.answer}")
+
+    val q = Question()
+    q.answer = "42"
+
+    // if statements are expressions and return value! Strings can be compared with equality operator ==
+    val message = if (q.answer == q.correct) {
+        "You were right"
+    } else {
+        "Try again?"
+    }
+
+    println(message)
 
 }
 
 class Question {
 
-    var Answer: String = ""
-    val Question: String = "What is the answer to life, the universe and everything?"
+    var answer: String = ""
+    val correct: String = "42"
+    val question: String = "What is the answer to life, the universe and everything?"
 
     fun display(): Unit {
-        println("You said $Answer") // string template :)
+        println("You said $answer") // string template :)
     }
 
 }
