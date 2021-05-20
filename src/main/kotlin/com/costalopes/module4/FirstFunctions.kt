@@ -1,7 +1,7 @@
 @file:JvmName("DisplayFunctions")
 // we can use this annotation to indicate to the compiler that the name should be this
 
-package com.costalopes.module4.functions
+package com.costalopes.module4
 
 fun main(args: Array<String>) {
     display("Hello, World")

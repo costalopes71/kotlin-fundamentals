@@ -1,4 +1,4 @@
-package com.costalopes.module4.functions;
+package com.costalopes.module4;
 
 public class JavaApp {
 
