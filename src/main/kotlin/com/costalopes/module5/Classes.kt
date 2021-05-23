@@ -13,6 +13,12 @@ open class Person {
 
 class Student : Person() {
     override fun getName(): String { return "" }
+
+    fun enrole(courseName: String) {
+        val course = Courses.allCourses
+            .firstOrNull{ course -> course.title == courseName }
+    }
+
 }
 
 /*
