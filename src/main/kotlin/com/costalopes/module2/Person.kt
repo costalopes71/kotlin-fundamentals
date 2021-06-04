@@ -1,4 +1,4 @@
-package com.costalopes
+package com.costalopes.module2
 
 class Person (var Name: String) {
 
